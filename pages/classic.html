@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الحزمة الكلاسيكية - Loving Homes</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* تنسيقات لضمان مظهر احترافي ورأسي */
+        body { margin: 0; background-color: #fdfdfd; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: 0.3s; }
+        
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: #2c3e50; padding: 15px 30px; flex-wrap: wrap; gap: 15px; }
+        .logo { color: white; font-size: 22px; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .nav-links a { color: white; text-decoration: none; }
+        .nav-links a.active { color: #e67e22; border-bottom: 2px solid #e67e22; }
+
+        .container { padding: 50px 20px; max-width: 900px; margin: auto; }
+        .package-header { text-align: center; margin-bottom: 40px; border-bottom: 3px solid #3498db; padding-bottom: 20px; }
+        .main-title { color: #2c3e50; font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* البطاقة الرئيسية للمميزات */
+        .feature-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            text-align: center; 
+            margin-bottom: 40px;
+            border: 1px solid #eee;
+        }
+        .feature-list { list-style: none; padding: 0; line-height: 2.5; font-size: 1.1rem; color: #555; }
+        .feature-list li::before { content: "✔️ "; color: #3498db; }
+
+        /* تنسيق المرافق بشكل رأسي وكبير */
+        .facility-item { 
+            background: white; 
+            border: 1px solid #eee; 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .facility-item img { width: 100%; border-radius: 15px; height: 400px; object-fit: cover; }
+        .facility-item h4 { font-size: 1.5rem; margin: 15px 0 10px; color: #2c3e50; }
+
+        .btn-ctrl { background: #34495e; color: white; border: 1px solid #5d6d7e; padding: 5px 12px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        .btn-ctrl:hover { background: #e67e22; }
+
+        .btn-booking { display: inline-block; padding: 15px 35px; background: #3498db; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        .btn-booking:hover { background: #2980b9; transform: scale(1.05); }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; margin-top: 60px; }
+    </style>
 </head>
 <body>
 
@@ -12,15 +60,12 @@
         <nav class="navbar">
             <div class="logo">Loving Homes 🐾</div>
 
-            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px; margin: 0 15px;">
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px;">
                 <div class="font-controls">
                     <button onclick="changeFontSize('increase')" class="btn-ctrl">A+</button>
                     <button onclick="changeFontSize('decrease')" class="btn-ctrl">A-</button>
                 </div>
-                
-                <button onclick="toggleTheme()" class="btn-ctrl" title="تبديل الوضع الليلي">🌓</button>
-
-                
+                <button onclick="toggleTheme()" class="btn-ctrl">🌓</button>
             </div>
 
             <ul class="nav-links">
@@ -36,50 +81,47 @@
     <main class="container">
         <section class="package-header">
             <h1 class="main-title">الحزمة الكلاسيكية (Classic Package)</h1>
-            <p class="classic-intro" style="text-align: center;">التوازن المثالي بين اللعب، الاسترخاء، والعناية بالمظهر.</p>
+            <p>التوازن المثالي بين اللعب، الاسترخاء، والعناية بالمظهر.</p>
         </section>
 
-        <section class="package-details" style="text-align: center; margin-top: 30px;">
-            <div class="text-side">
-                <h2>مميزات الحزمة الكلاسيكية</h2>
-                <ul class="feature-list" style="list-style: none; padding: 0; line-height: 2;">
-                    <li><strong>النشاط البدني:</strong> المشي 3 مرات يومياً أو ممارسة 3 أنشطة ممتعة.</li>
-                    <li><strong>اللعب الجماعي:</strong> وقت مخصص في حظيرة اللعب الداخلية الآمنة.</li>
-                    <li><strong>الاسترخاء:</strong> منطقة مخصصة للاسترخاء والهدوء بعيداً عن الضجيج.</li>
-                    <li><strong>العناية (Grooming):</strong> تشمل الحزمة جلسة حلاقة وتنظيف كاملة لكلبكم.</li>
-                </ul>
-                <div class="price-tag classic-color" style="background: #3498db; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; margin: 20px 0;">
-                    خيارنا الأكثر شعبية للعناية والمرح
-                </div>
-                <br>
-                <a href="contact.html" class="btn">احجز الحزمة الكلاسيكية</a>
+        <section class="feature-card">
+            <h2>مميزات الحزمة</h2>
+            <ul class="feature-list">
+                <li><strong>النشاط البدني:</strong> المشي 3 مرات يومياً أو ممارسة 3 أنشطة ممتعة.</li>
+                <li><strong>اللعب الجماعي:</strong> وقت مخصص في حظيرة اللعب الداخلية الآمنة.</li>
+                <li><strong>الاسترخاء:</strong> منطقة مخصصة للهدوء بعيداً عن الضجيج.</li>
+                <li><strong>العناية (Grooming):</strong> تشمل الحزمة جلسة حلاقة وتنظيف كاملة.</li>
+            </ul>
+            <div style="background: #e1f5fe; color: #0288d1; padding: 15px; border-radius: 8px; font-weight: bold; margin: 20px 0;">
+                خيارنا الأكثر شعبية للعناية والمرح!
             </div>
+            <a href="contact.html" class="btn-booking">احجز الحزمة الكلاسيكية</a>
         </section>
 
-        <section class="facilities-preview" style="margin-top: 60px;">
-            <h3 style="text-align: center; margin-bottom: 30px;">مرافق الحزمة الكلاسيكية</h3>
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center;">
-                
-                <div class="facility-item">
-                    <img src="../images/img-grooming-session.jpeg" alt="جلسة حلاقة" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                    <p style="margin-top: 10px; font-weight: bold;">صالون الحلاقة والمنتجع</p>
-                </div>
+        <section class="facilities-preview">
+            <h3 style="text-align: center; margin: 40px 0; font-size: 1.8rem;">مرافق الحزمة الكلاسيكية</h3>
+            
+            <div class="facility-item">
+                <img src="../images/img-grooming-session.jpeg" alt="صالون الحلاقة">
+                <h4>صالون الحلاقة والمنتجع</h4>
+                <p>نستخدم أفضل المنتجات العالمية لضمان نظافة وجمال فراء كلبكم.</p>
+            </div>
 
-                <div class="facility-item">
-                    <img src="../images/img-indoor-barn.jpg" alt="حظيرة داخلية" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                    <p style="margin-top: 10px; font-weight: bold;">حظيرة اللعب الداخلية</p>
-                </div>
+            <div class="facility-item">
+                <img src="../images/img-indoor-barn.jpg" alt="حظيرة اللعب">
+                <h4>حظيرة اللعب الداخلية</h4>
+                <p>بيئة مكيفة وآمنة للعب الجماعي وتكوين صداقات جديدة.</p>
+            </div>
 
-                <div class="facility-item">
-                    <img src="../images/img-relax-zone.jpg" alt="منطقة استرخاء" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                    <p style="margin-top: 10px; font-weight: bold;">منطقة الاسترخاء المريحة</p>
-                </div>
-
+            <div class="facility-item">
+                <img src="../images/img-relax-zone.jpg" alt="منطقة الاسترخاء">
+                <h4>منطقة الاسترخاء المريحة</h4>
+                <p>أسرّة طبية وأجواء هادئة تساعد الكلب على الراحة بعد يوم حافل.</p>
             </div>
         </section>
     </main>
 
-    <footer style="margin-top: 50px;">
+    <footer>
         <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
     </footer>
 

@@ -5,22 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الحزمة المميزة - Loving Homes</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* تنسيقات لضمان مظهر احترافي ورأسي */
+        body { margin: 0; background-color: #fdfdfd; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: 0.3s; }
+        
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: #2c3e50; padding: 15px 30px; flex-wrap: wrap; gap: 15px; }
+        .logo { color: white; font-size: 22px; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .nav-links a { color: white; text-decoration: none; }
+        .nav-links a.active { color: #e67e22; border-bottom: 2px solid #e67e22; }
+
+        .container { padding: 50px 20px; max-width: 900px; margin: auto; }
+        .package-header { text-align: center; margin-bottom: 40px; border-bottom: 3px solid #f1c40f; padding-bottom: 20px; }
+        .main-title { color: #2c3e50; font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* البطاقة الرئيسية للمميزات */
+        .feature-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            text-align: center; 
+            margin-bottom: 40px;
+            border: 1px solid #eee;
+        }
+        .feature-list { list-style: none; padding: 0; line-height: 2.5; font-size: 1.1rem; color: #555; }
+        .feature-list li::before { content: "⭐ "; color: #f1c40f; }
+
+        /* تنسيق الأنشطة بشكل رأسي وكبير */
+        .activity-item { 
+            background: white; 
+            border: 1px solid #eee; 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .activity-item img { width: 100%; border-radius: 15px; height: 400px; object-fit: cover; }
+        .activity-item h4 { font-size: 1.5rem; margin: 15px 0 10px; color: #2c3e50; }
+
+        .btn-ctrl { background: #34495e; color: white; border: 1px solid #5d6d7e; padding: 5px 12px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        .btn-ctrl:hover { background: #e67e22; }
+
+        .btn-booking { display: inline-block; padding: 15px 35px; background: #e67e22; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        .btn-booking:hover { background: #d35400; transform: scale(1.05); }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 30px; margin-top: 60px; }
+    </style>
 </head>
 <body>
 
     <header>
         <nav class="navbar">
             <div class="logo">Loving Homes 🐾</div>
-            
-            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px; margin: 0 15px;">
+
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px;">
                 <div class="font-controls">
                     <button onclick="changeFontSize('increase')" class="btn-ctrl">A+</button>
                     <button onclick="changeFontSize('decrease')" class="btn-ctrl">A-</button>
                 </div>
-                
-                <button onclick="toggleTheme()" class="btn-ctrl" title="تبديل الوضع الليلي">🌓</button>
-
-                
+                <button onclick="toggleTheme()" class="btn-ctrl">🌓</button>
             </div>
 
             <ul class="nav-links">
@@ -36,49 +81,51 @@
     <main class="container">
         <section class="package-header">
             <h1 class="main-title">الحزمة المميزة (Premium Package)</h1>
-            <p class="premium-intro" style="text-align: center;">التجربة الأكثر رفاهية ودلالاً لكلبك في Loving Homes</p>
+            <p>التجربة الأكثر رفاهية ودلالاً لكلبك في Loving Homes</p>
         </section>
 
-        <section class="package-details flex-row" style="display: flex; gap: 40px; align-items: center; margin-top: 30px; flex-wrap: wrap;">
-            <div class="text-side" style="flex: 1.5; min-width: 300px;">
-                <h2>ماذا تشمل هذه الحزمة؟</h2>
-                <ul class="feature-list" style="line-height: 1.8; margin-bottom: 20px; list-style: none; padding: 0;">
-                    <li><strong>النشاط:</strong> المشي 4 مرات يومياً أو ممارسة 4 أنشطة بدنية متنوعة.</li>
-                    <li><strong>الخصوصية:</strong> مساحة عشبية خاصة لكلبك للاسترخاء واللعب.</li>
-                    <li><strong>التواصل:</strong> تحديثات وصور يومية ترسل إليك لتكون مطمئناً طوال الوقت.</li>
-                    <li><strong>المكافآت:</strong> تقديم مكافآت (Treats) مخصصة حسب الاتفاق المسبق معك.</li>
-                </ul>
-                <div class="price-tag" style="background: #f1c40f; color: #333; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-bottom: 20px; font-weight: bold;">
-                    مثالية للإقامات التي تتطلب عناية فائقة
-                </div>
-                <br>
-                <a href="contact.html" class="btn" style="display: inline-block; padding: 12px 25px; background: #e67e22; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">احجز هذه الحزمة الآن</a>
+        <div class="activity-item">
+            <img src="../images/img-grassy-play-area.jpg" alt="كلب يستمتع بالحزمة المميزة">
+        </div>
+
+        <section class="feature-card">
+            <h2>ماذا تشمل هذه الحزمة؟</h2>
+            <ul class="feature-list">
+                <li><strong>النشاط:</strong> المشي 4 مرات يومياً أو ممارسة 4 أنشطة بدنية متنوعة.</li>
+                <li><strong>الخصوصية:</strong> مساحة عشبية خاصة لكلبك للاسترخاء واللعب.</li>
+                <li><strong>التواصل:</strong> تحديثات وصور يومية ترسل إليك لتكون مطمئناً.</li>
+                <li><strong>المكافآت:</strong> تقديم مكافآت (Treats) مخصصة حسب الاتفاق.</li>
+            </ul>
+            <div style="background: #fff9c4; color: #f57f17; padding: 15px; border-radius: 8px; font-weight: bold; margin: 20px 0;">
+                مثالية للإقامات التي تتطلب عناية فائقة ورفاهية تامة!
             </div>
-            <div class="image-side" style="flex: 1; min-width: 300px;">
-                <img src="../images/img-grassy-play-area.jpg" alt="كلب يستمتع بالحزمة المميزة" class="large-img" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); object-fit: cover;">
-            </div>
+            <a href="contact.html" class="btn-booking">احجز الحزمة المميزة الآن</a>
         </section>
 
-        <section class="activity-gallery" style="margin-top: 60px;">
-            <h3 style="text-align: center; margin-bottom: 30px;">لمحة من يوميات الحزمة المميزة</h3>
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                <div class="gallery-item" style="border: 1px solid #eee; padding: 10px; border-radius: 15px;">
-                    <img src="../images/img-walking.jpg" alt="تمشية" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                    <p style="text-align: center; margin-top: 10px; font-weight: bold;">جولات مشي مكثفة</p>
-                </div>
-                <div class="gallery-item" style="border: 1px solid #eee; padding: 10px; border-radius: 15px;">
-                    <img src="../images/img-play-time.jpg" alt="لعب" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                    <p style="text-align: center; margin-top: 10px; font-weight: bold;">أوقات لعب مرحة</p>
-                </div>
-                <div class="gallery-item" style="border: 1px solid #eee; padding: 10px; border-radius: 15px;">
-                    <img src="../images/img-treats.webp" alt="مكافآت" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-                    <p style="text-align: center; margin-top: 10px; font-weight: bold;">مكافآت صحية</p>
-                </div>
+        <section class="gallery-preview">
+            <h3 style="text-align: center; margin: 40px 0; font-size: 1.8rem;">لمحة من يوميات الحزمة المميزة</h3>
+            
+            <div class="activity-item">
+                <img src="../images/img-walking.jpg" alt="تمشية">
+                <h4>جولات مشي مكثفة</h4>
+                <p>مساحات خارجية مخصصة لاستكشاف الطبيعة وزيادة اللياقة البدنية.</p>
+            </div>
+
+            <div class="activity-item">
+                <img src="../images/img-play-time.jpg" alt="لعب">
+                <h4>أوقات لعب مرحة</h4>
+                <p>ألعاب تفاعلية فردية مع مدربين لضمان سعادة كلبكم النفسية.</p>
+            </div>
+
+            <div class="activity-item">
+                <img src="../images/img-treats.webp" alt="مكافآت">
+                <h4>مكافآت صحية فاخرة</h4>
+                <p>وجبات خفيفة غنية بالبروتين ومحضرة خصيصاً لأصدقائنا المميزين.</p>
             </div>
         </section>
     </main>
 
-    <footer style="margin-top: 50px; text-align: center; padding: 20px; background: #333; color: white;">
+    <footer>
         <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
     </footer>
 
