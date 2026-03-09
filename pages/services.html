@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرافقنا - Loving Homes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* التنسيقات التي أضفتِها لضمان جمالية الصور */
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .service-card {
+            overflow: hidden;
+            padding: 15px;
+            border: 1px solid #eee; /* إضافة إطار خفيف ليتناسب مع النمط الليلي */
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Loving Homes 🐾</div>
+            
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px; margin: 0 15px;">
+                <div class="font-controls">
+                    <button onclick="changeFontSize('increase')" class="btn-ctrl">A+</button>
+                    <button onclick="changeFontSize('decrease')" class="btn-ctrl">A-</button>
+                </div>
+                
+                <button onclick="toggleTheme()" class="btn-ctrl" title="تبديل الوضع الليلي">🌓</button>
+
+                
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الفندق</a></li>
+                <li><a href="services.html" class="active">المرافق</a></li>
+                <li><a href="packages.html">الحزم والأسعار</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">مرافقنا الفاخرة في هونج كونج</h1>
+        <p style="text-align: center; margin-bottom: 40px;">نحن نوفر بيئة تحاكي المنزل لضمان راحة كلبكم وسعادته.</p>
+
+        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+            <div class="service-card">
+                <img src="../images/img-indoor-forest.jpg" alt="غابة داخلية" class="service-img">
+                <h3>الغابة الداخلية</h3>
+                <p>مساحة خضراء واسعة وآمنة للعب والاستكشاف في بيئة طبيعية محفزة.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/img-heating-cooling.avif" alt="تدفئة وتكييف" class="service-img">
+                <h3>تحكم حراري كامل</h3>
+                <p>أنظمة تدفئة وتكييف متطورة لضمان درجة حرارة مثالية طوال العام.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/img-tv-screens.jpg" alt="شاشات تلفاز" class="service-img">
+                <h3>ترفيه منزلي</h3>
+                <p>شاشات تلفاز تعرض برامج مخصصة لتهدئة الكلاب وتقليل التوتر.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/img-cctv.jpg" alt="كاميرات مراقبة" class="service-img">
+                <h3>بث حي 24/7</h3>
+                <p>كاميرات ويب تتيح لكم مشاهدة كلابكم والاطمئنان عليها من أي مكان.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; background: #333; color: white;">
+        <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

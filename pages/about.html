@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن Loving Homes - قصتنا ورؤيتنا</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Loving Homes 🐾</div>
+            
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px; margin: 0 15px;">
+                <div class="font-controls">
+                    <button onclick="changeFontSize('increase')" class="btn-ctrl">A+</button>
+                    <button onclick="changeFontSize('decrease')" class="btn-ctrl">A-</button>
+                </div>
+                
+                <button onclick="toggleTheme()" class="btn-ctrl" title="تبديل الوضع الليلي">🌓</button>
+
+               
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="about.html" class="active">عن الفندق</a></li>
+                <li><a href="services.html">المرافق</a></li>
+                <li><a href="packages.html">الحزم والأسعار</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <h1 class="main-title">قصتنا في هونج كونج</h1>
+            
+            <div class="about-content" style="display: flex; gap: 40px; align-items: center; margin-top: 30px; text-align: right;">
+                
+                <div class="image-side" style="flex: 1;">
+                    <img src="../images/img-hotel-history.jpg" alt="تاريخ لوفينغ هومز" class="large-img" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); object-fit: cover;">
+                </div>
+
+                <div class="text-side" style="flex: 1.5;">
+                    <h2>لماذا Loving Homes؟</h2>
+                    <p>بدأنا كمرفق صغير لرعاية الكلاب، ومع مرور الوقت، شهدت Loving Homes زيادة هائلة في الطلب على خدماتنا المتميزة. هذا النجاح دفعنا لتحويل الفندق إلى منتجع متكامل يواكب أحدث تكنولوجيا رعاية الحيوانات الأليفة.</p>
+                    <p>رؤيتنا هي تقديم بيئة آمنة، دافئة، ومليئة بالمرح، تماماً كما في منازلكم، ولهذا اخترنا اسمنا ليكون "البيوت المحبة".</p>
+                    
+                    <div class="stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; text-align: center;">
+                        <div class="stat-item" style="padding: 20px; border-radius: 10px;">
+                            <h3 style="color: #e67e22; font-size: 2rem; margin-bottom: 5px;">+500</h3>
+                            <p style="font-weight: bold;">عميل سعيد</p>
+                        </div>
+                        <div class="stat-item" style="padding: 20px; border-radius: 10px;">
+                            <h3 style="color: #e67e22; font-size: 2rem; margin-bottom: 5px;">24/7</h3>
+                            <p style="font-weight: bold;">رعاية بيطرية</p>
+                        </div>
+                        <div class="stat-item" style="padding: 20px; border-radius: 10px;">
+                            <h3 style="color: #e67e22; font-size: 2rem; margin-bottom: 5px;">100%</h3>
+                            <p style="font-weight: bold;">أمان وخصوصية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 50px;">
+        <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

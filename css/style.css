@@ -1,0 +1,235 @@
+/* 1. الإعدادات العامة والمتغيرات */
+:root {
+    --primary-color: #2c3e50;    /* أزرق داكن فخم للمنبار والفوتر */
+    --accent-gold: #f39c12;      /* برتقالي ذهبي للأزرار واللمسات الجمالية */
+    --accent-blue: #2980b9;      /* أزرق للحزمة الكلاسيكية */
+    --accent-orange: #d35400;    /* برتقالي غامق لحزمة اليوم */
+    --text-color: #2c3e50;       
+    --light-bg: #f4f7f6;         /* لون خلفية مريح للعين */
+    --white: #ffffff;
+    --card-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 2. إعدادات الوضع الليلي (Dark Mode) */
+body.dark-theme {
+    --light-bg: #121212;
+    --text-color: #e0e0e0;
+    --white: #1e1e1e;
+    --primary-color: #000000;
+    --card-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    transition: all 0.3s ease; /* حركة ناعمة عند تكبير الخط أو تغيير الثيم */
+}
+
+/* 3. الهيدر والمنيو */
+header {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* أزرار التحكم (الخط، الثيم، اللغة) */
+.controls-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-ctrl {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: 1px solid var(--accent-gold);
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-ctrl:hover {
+    background: var(--accent-gold);
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: var(--accent-gold);
+}
+
+/* 4. الحاوية والتنسيق العام */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.main-title {
+    margin-bottom: 20px;
+    color: var(--accent-gold);
+}
+
+/* 5. نظام الشبكة (Grid) والبطاقات */
+.grid-container, .services-grid, .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.package-card, .service-card, .activity-item, .card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: 0.3s;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    overflow: hidden;
+}
+
+.package-card:hover, .service-card:hover, .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* تنسيق الصور داخل البطاقات */
+.service-img, .card img, .activity-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    filter: brightness(0.9);
+    transition: 0.3s;
+}
+
+.service-card:hover img, .card:hover img {
+    filter: brightness(1);
+}
+
+/* 6. الأزرار العامة */
+.btn {
+    background: var(--accent-gold);
+    color: #ffffff;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: var(--accent-blue);
+    transform: scale(1.05);
+}
+
+/* 7. تمييز ألوان الحزم */
+.premium-color { border-top: 6px solid var(--accent-gold); }
+.classic-color { border-top: 6px solid var(--accent-blue); }
+.day-color { border-top: 6px solid var(--accent-orange); }
+
+/* 8. الفوتر */
+footer {
+    background: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* 9. صفحة اتصل بنا والنماذج */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: right;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text-color);
+}
+
+/* 10. التجاوب ودعم الاتجاهات */
+[dir="ltr"] {
+    text-align: left;
+}
+
+[dir="ltr"] .contact-wrapper, [dir="ltr"] .form-group {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+.hidden { display: none; }

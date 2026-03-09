@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - Loving Homes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Loving Homes 🐾</div>
+            
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px; margin: 0 15px;">
+                <div class="font-controls">
+                    <button onclick="changeFontSize('increase')" class="btn-ctrl">A+</button>
+                    <button onclick="changeFontSize('decrease')" class="btn-ctrl">A-</button>
+                </div>
+                
+                <button onclick="toggleTheme()" class="btn-ctrl" title="تبديل الوضع الليلي">🌓</button>
+
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الفندق</a></li>
+                <li><a href="services.html">المرافق</a></li>
+                <li><a href="packages.html">الحزم والأسعار</a></li>
+                <li><a href="contact.html" class="active">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">تواصل معنا</h1>
+        <p style="text-align: center; margin-bottom: 30px;">نحن هنا للإجابة على استفساراتكم وترتيب الحزم المخصصة لكلابكم المدللة.</p>
+
+        <div class="contact-wrapper" style="display: flex; gap: 30px; flex-wrap: wrap;">
+            
+            <div class="contact-form" style="flex: 2; min-width: 300px;">
+                <h2 style="margin-bottom: 20px; color: #e67e22;">أرسل لنا طلباً</h2>
+                <form id="petContactForm">
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px;">اسم صاحب الكلب:</label>
+                        <input type="text" id="name" placeholder="أدخل اسمك الكامل" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px;">البريد الإلكتروني:</label>
+                        <input type="email" id="email" placeholder="example@mail.com" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px;">نوع الحزمة المطلوبة:</label>
+                        <select id="package" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                            <option value="premium">الحزمة المميزة (Premium)</option>
+                            <option value="classic">الحزمة الكلاسيكية (Classic)</option>
+                            <option value="day">حزمة اليوم (Day Care)</option>
+                            <option value="custom">حزمة مخصصة / إقامة طويلة</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px;">رسالتك:</label>
+                        <textarea id="message" rows="4" placeholder="اكتب استفسارك هنا أو تفاصيل عن كلبك..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; padding: 12px; background: #e67e22; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">إرسال الطلب الآن</button>
+                    <div id="formFeedback" style="display: none; margin-top:15px; text-align:center; font-weight:bold; padding: 10px; border-radius: 5px;"></div>
+                </form>
+            </div>
+
+            <div class="contact-info" style="flex: 1; min-width: 250px; background: #fdf2e9; padding: 25px; border-radius: 15px;">
+                <h2 style="color: #d35400; margin-bottom: 20px;">معلومات الفندق</h2>
+                <div style="text-align: right; line-height: 2;">
+                    <p>📍 <strong>العنوان:</strong> هونج كونج، منطقة المنتجع الأخضر</p>
+                    <p>📞 <strong>الهاتف:</strong> 852-XXXX-XXXX+</p>
+                    <p>📧 <strong>البريد:</strong> info@lovinghomes.hk</p>
+                    <p>⏰ <strong>ساعات العمل:</strong> 24 ساعة / 7 أيام</p>
+                </div>
+                
+                <div class="map-placeholder" style="margin-top: 20px; background: rgba(255,255,255,0.5); padding: 20px; border-radius: 10px; border: 1px dashed #e67e22; text-align: center;">
+                    <p>📍 [خريطة موقع الفندق في هونج كونج]</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; background: #333; color: white;">
+        <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حزمة اليوم - Loving Homes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Loving Homes 🐾</div>
+
+            <div class="controls-wrapper" style="display: flex; align-items: center; gap: 10px; margin: 0 15px;">
+                <div class="font-controls">
+                    <button onclick="changeFontSize('increase')" class="btn-ctrl">A+</button>
+                    <button onclick="changeFontSize('decrease')" class="btn-ctrl">A-</button>
+                </div>
+                
+                <button onclick="toggleTheme()" class="btn-ctrl" title="تبديل الوضع الليلي">🌓</button>
+
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الفندق</a></li>
+                <li><a href="services.html" class="active">المرافق</a></li>
+                <li><a href="packages.html">الحزم والأسعار</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="package-header">
+            <h1 class="main-title">حزمة اليوم (Day Package)</h1>
+            <p class="day-intro" style="text-align: center;">يوم مليء بالمغامرة والنشاط لكلبك بعيداً عن الملل.</p>
+        </section>
+
+        <section class="package-details" style="display: flex; gap: 40px; align-items: center; margin-top: 30px; flex-wrap: wrap;">
+            <div class="text-side" style="flex: 1.5; min-width: 300px;">
+                <h2>ماذا ينتظر كلبك في حزمة اليوم?</h2>
+                <ul class="feature-list" style="line-height: 2; list-style: none; padding: 0;">
+                    <li><strong>المشي:</strong> جولتان مشي يومياً في الهواء الطلق.</li>
+                    <li><strong>منطقة اللعب:</strong> وصول كامل لمنطقة اللعب الخارجية الآمنة.</li>
+                    <li><strong>مسار الرشاقة (Agility):</strong> تدريبات ممتعة في مسار الرشاقة المخصص للكلاب النشيطة.</li>
+                    <li><strong>المرح الرملي:</strong> نشاط "حفر حفرة في الرمل" في المنطقة المخصصة لذلك.</li>
+                </ul>
+                <div class="price-tag day-color" style="background: #2ecc71; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; margin: 20px 0;">
+                    الخيار الأفضل للكلاب المليئة بالطاقة!
+                </div>
+                <br>
+                <a href="contact.html" class="btn" style="display: inline-block; padding: 12px 25px; background: #e67e22; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">احجز يوم الكلب الآن</a>
+            </div>
+            <div class="image-side" style="flex: 1; min-width: 300px;">
+                <img src="../images/img-agility-track.jpg" alt="كلب في مسار الرشاقة" class="large-img" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            </div>
+        </section>
+
+        <section class="special-activities" style="margin-top: 60px;">
+            <h3 style="text-align: center; margin-bottom: 30px;">أنشطة ترفيهية فريدة</h3>
+            <div class="activities-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
+                
+                <div class="activity-item" style="border: 1px solid #eee; padding: 15px; border-radius: 15px;">
+                    <img src="../images/img-sand-pit.jpg" alt="حفرة الرمل" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px;">
+                    <h4 style="margin-top: 15px;">متعة حفر الرمل</h4>
+                    <p>منطقة رملية نظيفة وآمنة مخصصة للغريزة الطبيعية للكلاب.</p>
+                </div>
+
+                <div class="activity-item" style="border: 1px solid #eee; padding: 15px; border-radius: 15px;">
+                    <img src="../images/img-agility-track.jpg" alt="مسار الرشاقة" style="width: 100%; height: 250px; object-fit: cover; border-radius: 15px;">
+                    <h4 style="margin-top: 15px;">تحدي الرشاقة</h4>
+                    <p>حواجز ومنعطفات تساعد في تقوية عضلات الكلب وذكائه.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; background: #333; color: white;">
+        <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
